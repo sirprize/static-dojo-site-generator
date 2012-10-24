@@ -65,6 +65,22 @@ All the root dirs starting with an underscore contain generated files - do not e
     + html (jekyll source dir)
         + index.html
 
+## Starting From Scratch And Putting Your Project Under Git
+
++ `git clone https://github.com/sirprize/static-dojo-site-generator your-project-name`
++ `cd your-project-name`
++ `sudo rm -dR .git`
++ `rm .gitmodules`
++ `rm -dR assets/vendor`
++ `git init`
++ `git submodule add git://github.com/dojo/dojo.git assets/vendor/dojo/dojo`
++ `git submodule add git://github.com/dojo/dijit.git assets/vendor/dojo/dijit`
++ `git submodule add git://github.com/dojo/util.git assets/vendor/dojo/util`
++ `git submodule add git://github.com/twitter/bootstrap.git assets/vendor/twitter/bootstrap`
++ `git submodule add git://github.com/sirprize/dobolo.git assets/vendor/sirprize/dobolo`
++ `git add .`
++ `git commit -m "Initial import"`
+
 ## Dependencies
 
 + [dojo/dojo](http://github.com/dojo/dojo)
