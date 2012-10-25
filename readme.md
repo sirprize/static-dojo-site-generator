@@ -89,7 +89,7 @@ All the root dirs starting with an underscore contain generated files - do not e
 + [twitter/bootstrap](http://github.com/twitter/bootstrap.git)
 + [sirprize/dobolo](http://github.com/sirprize/dobolo.git)
 + [aFarkas/html5shiv](https://github.com/aFarkas/html5shiv)
-+ [highlight.js](http://softwaremaniacs.org/soft/highlight/en/)
++ [google-code-prettify](http://code.google.com/p/google-code-prettify/)
 
 ## Requirements
 
