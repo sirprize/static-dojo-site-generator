@@ -4,7 +4,7 @@ Boilerplate for static Dojo-based website generation.
 
 ## Purpose
 
-This project aims to provide a boilerplate infrastructure for static website generation using [jekyll](https://github.com/mojombo/jekyll) and taking into account the specifics of working with [Dojo](http://dojotoolkit.org/). Dojo uses filenames starting with an underscore which have special meaning to jekyll. static-dojo-site-generator makes the two play nicely together and results in websites suitable for [Github Pages](http://pages.github.com/) or any other static hosting situation. For an example take a look a the [dijitive website](http://sirprize.github.com/dijitive/)
+This project aims to provide a boilerplate infrastructure for static website generation using [jekyll](https://github.com/mojombo/jekyll) and taking into account the specifics of working with [Dojo](http://dojotoolkit.org/). Dojo uses filenames starting with an underscore which have special meaning to jekyll. static-dojo-site-generator makes the two play nicely together and results in websites suitable for [Github Pages](http://pages.github.com/) or any other static hosting situation. For an example take a look a the [dobolo website](http://sirprize.github.com/dobolo/)
 
 ## Getting Started
 
@@ -74,20 +74,22 @@ All the root dirs starting with an underscore contain generated files - do not e
 + `rm -dR assets/vendor`
 + `git init`
 + `git submodule add git://github.com/dojo/dojo.git assets/vendor/dojo/dojo`
-+ `git submodule add git://github.com/dojo/dijit.git assets/vendor/dojo/dijit`
 + `git submodule add git://github.com/dojo/util.git assets/vendor/dojo/util`
 + `git submodule add git://github.com/twitter/bootstrap.git assets/vendor/twitter/bootstrap`
++ `git submodule add git://github.com/sirprize/dojo-form-controls.git assets/vendor/sirprize/dojo-form-controls`
 + `git submodule add git://github.com/sirprize/dobolo.git assets/vendor/sirprize/dobolo`
++ `git submodule add git://github.com/sirprize/mijit.git assets/vendor/sirprize/mijit`
 + `git add .`
 + `git commit -m "Initial import"`
 
 ## Dependencies
 
 + [dojo/dojo](http://github.com/dojo/dojo)
-+ [dojo/dijit](http://github.com/dojo/dijit)
 + [dojo/util](http://github.com/dojo/util)
 + [twitter/bootstrap](http://github.com/twitter/bootstrap.git)
++ [sirprize/dojo-form-controls](http://github.com/sirprize/dojo-form-controls.git)
 + [sirprize/dobolo](http://github.com/sirprize/dobolo.git)
++ [sirprize/mijit](http://github.com/sirprize/mijit.git)
 + [aFarkas/html5shiv](https://github.com/aFarkas/html5shiv)
 + [google-code-prettify](http://code.google.com/p/google-code-prettify/)
 
