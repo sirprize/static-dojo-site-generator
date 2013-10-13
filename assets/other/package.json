@@ -1,6 +1,6 @@
 {
     "name": "other",
-    "description": "Copy-only things",
+    "description": "static-dojo-site-generator (copy-only stuff)",
     "version": "dev",
     "dojoBuild": "package.js"
 }

@@ -1,33 +1,14 @@
 require([
-    "dobolo/Affix",
-    "dobolo/ScrollSpy",
-    "dojo/_base/window",
-    "dojo/query",
     "dojo/parser",
+    "dojo/query",
     "dojo/domReady!"
 ], function (
-    Affix,
-    ScrollSpy,
-    baseWin,
-    query,
-    parser
+    parser,
+    query
 ) {
-    "use strict";
-    
-    parser.parse();
-    //hljs.initHighlightingOnLoad();
+    // by default parse() parses children of <body>
+    // here we want <body> to be included so we start at <html>
+    parser.parse(query('html')[0]);
+
     window.prettyPrint && prettyPrint();
-    
-    var affix = new Affix({
-        offsetTop: function () {
-            return document.width <= 980 ? 245 : 195;
-        }
-    }, query('.bs-docs-sidenav')[0]);
-    
-    var scrollSpy = new ScrollSpy({
-        targetSelector: '.bs-docs-sidenav',
-        offsetNodeSelector: 'section.spy',
-        offsetTop: 70,
-        wait: 50
-    }, baseWin.body());
 });

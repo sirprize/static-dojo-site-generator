@@ -1,6 +1,6 @@
 {
     "name": "frontend",
-    "description": "Static Dojo Website",
+    "description": "static-dojo-site-generator (scripts)",
     "version": "dev",
     "dojoBuild": "package.js"
 }

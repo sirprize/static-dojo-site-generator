@@ -5,58 +5,114 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>XXX</title>
+        <title>XXXXXXXXXX</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
-        {% include styles.html %}
-        {% include html5shim.html %}
+        
+        {% if site.env == "dev" %}
+            <link href="../assets/other/google-code-prettify/prettify.css" rel="stylesheet">
+            <link href="../assets/vendor/twbs/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+            <link href="../assets/vendor/twbs/bootstrap/docs-assets/css/docs.css" rel="stylesheet">
+            <link href="../assets/styles/docs.css" rel="stylesheet">
+
+            <!--[if lt IE 9]>
+                <script src="../assets/vendor/twbs/bootstrap/docs-assets/js/html5shiv.js"></script>
+                <script src="../assets/vendor/twbs/bootstrap/docs-assets/js/respond.min.js"></script>
+            <![endif]-->
+        {% else %}
+            <link href="../_assets/other/google-code-prettify/prettify.css" rel="stylesheet">
+            <link href="../_assets/other/twbs/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+            <link href="../_assets/other/twbs/bootstrap/docs-assets/css/docs.css" rel="stylesheet">
+            <link href="../_assets/frontend-styles/docs.css" rel="stylesheet">
+
+            <!--[if lt IE 9]>
+                <script src="../_assets/other/twbs/bootstrap/docs-assets/js/html5shiv.js"></script>
+                <script src="../_assets/other/twbs/bootstrap/docs-assets/js/respond.min.js"></script>
+            <![endif]-->
+        {% endif %}
     </head>
 
-    <body>
-        {% include navbar.html %}
-
-        <!-- Subhead -->
-        <header class="jumbotron subhead" id="overview">
+    <body data-dojo-type="dobolo/ScrollSpy" data-dojo-props="targetSelector: '.bs-sidenav', offsetsSelector: '.bs-docs-section', offsetTop: 70, wait: 100">
+        <header class="navbar navbar-inverse navbar-fixed-top" role="banner">
             <div class="container">
-                <h1>XXX</h1>
-                <p class="lead">XXX</p>
+                <div class="navbar-header">
+                    <a href="XXXXXXXXXX" class="navbar-brand">XXXXXXXXXX</a>
+                </div>
             </div>
         </header>
 
-        <div class="container">
+        <div class="jumbotron">
+            <div class="container">
+                <h1>XXXXXXXXXX</h1>
+                <p>XXXXXXXXXX</p>
+            </div>
+        </div>
 
-            <!-- Docs nav -->
+        <div class="container">
             <div class="row">
-                <div class="span3 bs-docs-sidebar">
-                    <ul class="nav nav-list bs-docs-sidenav">
-                        <li><a href="#xxx"><i class="icon-chevron-right"></i> XXX</a></li>
-                    </ul>
+                <div class="col-md-3">
+                    <div class="bs-sidebar hidden-print" data-dojo-type="dobolo/Affix" data-dojo-props="offsetTop: 200">
+                        <ul class="nav bs-sidenav">
+                            <li><a href="#XXXXXXXXXX">XXXXXXXXXX</a></li>
+                        </ul>
+                    </div>
                 </div>
-            
-                <div class="span9">
-                    
-                    <!-- XXX -->
-                    <section id="xxx" class="spy">
+
+                <div class="col-md-9" role="main">
+                    <!-- XXXXXXXXXX -->
+                    <div id="XXXXXXXXXX" class="bs-docs-section">
                         <div class="page-header">
-                            <h1>XXX</h1>
-                            <p>XXX.</p>
+                            <h1>XXXXXXXXXX</h1>
+                            <p>XXXXXXXXXX</p>
                         </div>
                         
-                        <h3>XXX</h3>
-                        <div class="bs-docs-example">
+                        <div class="bs-example">
                             {% include index/snippet.html %}
                         </div>
+                        
+                        <h3>Declarative</h3>
                         {% capture snippet %}{% include index/snippet.html %}{% endcapture %}
-                        <pre class="prettyprint linenums">{{ snippet | escape }}</pre>
-                    </section>
-                    
+                        <pre class="prettyprint">{{ snippet | escape }}</pre>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <footer class="bs-footer" role="contentinfo">
+            <div class="container">
+                <p class="pull-right"><a href="#">Back to top</a></p>
+                <p>Big thanks go out to the <a href="http://dojotoolkit.org">Dojo community</a> and the <a href="http://getbootstrap.com/">Twitter Bootstrap crew</a></p>
+                <p>static-dojo-site-generator is written by <a href="http://sirprize.me">sirprize</a> and it is released under the <a href="http://opensource.org/licenses/mit-license.php">MIT license</a>.</p>
+                <p>This project is hosted on <a href="http://github.com/sirprize/static-dojo-site-generator">Github</a> and this documentation has been generated with <a href="http://github.com/sirprize/static-dojo-site-generator-doc">static-dojo-site-generator-doc</a></p>
+            </div>
+        </footer>
         
-        {% include footer.html %}
-        {% include scripts.html %}
-        {% include analytics.html %}
+        {% if site.env == "dev" %}
+            <script src="../assets/other/google-code-prettify/prettify.js"></script>
+            <script src="../assets/scripts/config.js"></script>
+            <script src="../assets/vendor/dojo/dojo/dojo.js"></script>
+            <script src="../assets/scripts/index.js"></script>
+        {% else %}
+            <script src="../_assets/other/google-code-prettify/prettify.js"></script>
+            <script data-dojo-config="async: true, parseOnLoad: true" src="../_assets/dojo/dojo.js"></script>
+            <script src="../_assets/frontend/index.js"></script>
+        {% endif %}
+        
+        {% comment %}
+            The script is commented out for development only. Commenting is removed by Phing during deployment build time.
+        {% endcomment %}
+
+        <script>/* Google Analytics
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'XXXXXXXXXX']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        End Google Analytics */</script>
     </body>
 </html>
